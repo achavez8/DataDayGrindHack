@@ -1,0 +1,142 @@
+{
+	"actions": [
+		{
+			"collect": {
+				"name": "which_virtual_data_program_is_right_for_you",
+				"questions": [
+					{
+						"question": "You are taking a trip to company headquarters 🛫 the destination reads: \n \n a. Boston, Massachusetts 🇺🇸 \n \n b. Melbourne, Australia 🦘\n \n c. Amstelveen, Netherlands 🇳🇱",
+						"name": "q1",
+						"validate": {
+							"allowed_values": {
+								"list": [
+									"a",
+									"b",
+									"c"
+								]
+							},
+							"on_failure": {
+								"messages": [
+									{
+										"say": "Please send a, b, or c!"
+									}
+								],
+								"repeat_question": true
+							},
+							"max_attempts": {
+								"redirect": "task://greeting",
+								"num_attempts": 3
+							}
+						}
+					},
+					{
+						"question": "Which industry do you see yourself disrupting in the near future?  \n\n a. Power, Renewable Energy, Aviation or Health (heck, maybe all of these!) 💡 \n\n b. Banking and Investments  🏦 \n\n c. Auditing and Tax 🧾",
+						"name": "q2",
+						"validate": {
+							"allowed_values": {
+								"list": [
+									"a",
+									"b",
+									"c"
+								]
+							},
+							"on_failure": {
+								"messages": [
+									{
+										"say": "Please send a, b, or c!"
+									}
+								],
+								"repeat_question": true
+							},
+							"max_attempts": {
+								"redirect": "task://greeting",
+								"num_attempts": 3
+							}
+						}
+					},
+					{
+						"question": "*zoom chime rings* and you find yourself in a virtual job fair 💻 You tell the recruiter that you've been been sharpening your skills in: \n\n a. Data Engineering ⚙️ \n\n b. Predictive Analysis 📈 \n\n c. Data Quality Analysis  📊",
+						"name": "q3",
+						"validate": {
+							"allowed_values": {
+								"list": [
+									"a",
+									"b",
+									"c"
+								]
+							},
+							"on_failure": {
+								"messages": [
+									{
+										"say": "Please send a, b, or c!"
+									}
+								],
+								"repeat_question": true
+							},
+							"max_attempts": {
+								"redirect": "task://greeting",
+								"num_attempts": 3
+							}
+						}
+					},
+					{
+						"question": "How do you like to roll? 🎲  \n\n a. Dataiku all the way! 🐦 \n\n b. Stick to R,SAS, Python 🐍\n\n c. Start with Excel and then run with it 🏃",
+						"name": "q4",
+						"validate": {
+							"allowed_values": {
+								"list": [
+									"a",
+									"b",
+									"c"
+								]
+							},
+							"on_failure": {
+								"messages": [
+									{
+										"say": "Please send a, b, or c!"
+									}
+								],
+								"repeat_question": true
+							},
+							"max_attempts": {
+								"redirect": "task://greeting",
+								"num_attempts": 3
+							}
+						}
+					},
+					{
+						"question": "How do learn best? 🤔 \n \n a. Videos ⏩ \n\n b.  open-ended questions❓\n \nc.  tasks that simulate the real world 🌎 ",
+						"name": "q5",
+						"validate": {
+							"allowed_values": {
+								"list": [
+									"a",
+									"b",
+									"c"
+								]
+							},
+							"on_failure": {
+								"messages": [
+									{
+										"say": "Please send a, b, or c!"
+									}
+								],
+								"repeat_question": true
+							},
+							"max_attempts": {
+								"redirect": "task://greeting",
+								"num_attempts": 3
+							}
+						}
+					}
+				],
+				"on_complete": {
+					"redirect": {
+						"method": "POST",
+						"uri": "https://UNIQUE_USERNAME.twil.io/YOU_CHOOSE_PATH" //CHANGE THIS!
+					}
+				}
+			}
+		}
+	]
+}

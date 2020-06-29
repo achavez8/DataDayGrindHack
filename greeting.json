@@ -1,0 +1,10 @@
+{
+	"actions": [
+		{
+			"say": "ah 😱 you don't know which of the InsideSherpa Free Virtual Data Programs to enroll in. Take this quiz to find your match!"
+		},
+		{
+			"redirect": "task://main_questions"
+		}
+	]
+}
